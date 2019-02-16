@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.19.1">
+    <title>Coltrane.Theory.Note – coltrane v0.0.1</title>
+    <link rel="stylesheet" href="dist/app-240d7fc7e5.css" />
+    <script src="dist/sidebar_items-0e3a5bf75f.js"></script>
+    
+  </head>
+  <body data-type="modules">
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+    <div class="main">
+<button class="sidebar-button sidebar-toggle">
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
+</button>
+<button class="sidebar-button night-mode-toggle">
+  <span class="icon-theme" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Theme</span>
+</button>
+<section class="sidebar">
+
+  <a href="api-reference.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+coltrane      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.0.1
+      </h2>
+    </div>
+  </a>
+
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="Search" aria-label="Search" autocomplete="off" />
+  </form>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+
+
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">coltrane v0.0.1</small>
+Coltrane.Theory.Note              </h1>
+
+
+        <section id="moduledoc">
+<p>Notes are different ways to classify and relate sounds.</p>
+        </section>
+
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Summary
+          </h1>
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#alteration_from_notation/1">alteration_from_notation(symbols)</a>
+  </div>
+    <div class="summary-synopsis"><p>iex&gt; Note.alteration_from_notation(“##”)</p>
+<pre><code class="nohighlight makeup elixir"><span class="mi">2</span></code></pre>
+</div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#alteration_from_number/1">alteration_from_number(alteration)</a>
+  </div>
+    <div class="summary-synopsis"><p>Returns the symbol string part of a Note notation from a number</p>
+</div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#from_notation/1">from_notation(notation)</a>
+  </div>
+    <div class="summary-synopsis"><p>Parses the notation into a Note struct</p>
+</div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#letter/1">letter(note)</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#letters/0">letters()</a>
+  </div>
+    <div class="summary-synopsis"><p>Returns all the letters used to describe music in western music</p>
+</div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#name/1">name(note)</a>
+  </div>
+    <div class="summary-synopsis"><p>iex&gt; Note.name(%Note{alteration: 2, base_pitch_class: 0})</p>
+<pre><code class="nohighlight makeup elixir"><span class="s">&quot;C##&quot;</span></code></pre>
+</div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#transpose/2">transpose(note, interval)</a>
+  </div>
+    <div class="summary-synopsis"><p>Transposes a note by a certain interval</p>
+</div>
+</div>
+  </div>
+          
+        </section>
+
+
+
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Functions
+          </h1>
+<div class="detail" id="alteration_from_notation/1">
+    <div class="detail-header">
+    <a href="#alteration_from_notation/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">alteration_from_notation(symbols)</span>
+          </div>
+  <section class="docstring">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Note</span><span class="o">.</span><span class="n">alteration_from_notation</span><span class="p" data-group-id="6534704090-1">(</span><span class="s">&quot;##&quot;</span><span class="p" data-group-id="6534704090-1">)</span><span class="w">
+</span><span class="mi">2</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Note</span><span class="o">.</span><span class="n">alteration_from_notation</span><span class="p" data-group-id="6534704090-2">(</span><span class="s">&quot;bb&quot;</span><span class="p" data-group-id="6534704090-2">)</span><span class="w">
+</span><span class="o">-</span><span class="mi">2</span></code></pre>
+  </section>
+</div>
+<div class="detail" id="alteration_from_number/1">
+    <div class="detail-header">
+    <a href="#alteration_from_number/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">alteration_from_number(alteration)</span>
+          </div>
+  <section class="docstring">
+<p>Returns the symbol string part of a Note notation from a number.</p>
+<p>Examples:</p>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Note</span><span class="o">.</span><span class="n">alteration_from_number</span><span class="p" data-group-id="3580367220-1">(</span><span class="o">-</span><span class="mi">2</span><span class="p" data-group-id="3580367220-1">)</span><span class="w">
+</span><span class="s">&quot;bb&quot;</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Note</span><span class="o">.</span><span class="n">alteration_from_number</span><span class="p" data-group-id="3580367220-2">(</span><span class="mi">2</span><span class="p" data-group-id="3580367220-2">)</span><span class="w">
+</span><span class="s">&quot;##&quot;</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Note</span><span class="o">.</span><span class="n">alteration_from_number</span><span class="p" data-group-id="3580367220-3">(</span><span class="mi">0</span><span class="p" data-group-id="3580367220-3">)</span><span class="w">
+</span><span class="s">&quot;&quot;</span></code></pre>
+  </section>
+</div>
+<div class="detail" id="from_notation/1">
+    <div class="detail-header">
+    <a href="#from_notation/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">from_notation(notation)</span>
+          </div>
+  <section class="docstring">
+<p>Parses the notation into a Note struct</p>
+<h2 id="from_notation/1-examples" class="section-heading">
+  <a href="#from_notation/1-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Note</span><span class="o">.</span><span class="n">from_notation</span><span class="p" data-group-id="0545318488-1">(</span><span class="s">&quot;C#&quot;</span><span class="p" data-group-id="0545318488-1">)</span><span class="w">
+</span><span class="p" data-group-id="0545318488-2">%</span><span class="nc" data-group-id="0545318488-2">Note</span><span class="p" data-group-id="0545318488-2">{</span><span class="ss">alteration</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">base_pitch_class</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="0545318488-2">}</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Note</span><span class="o">.</span><span class="n">from_notation</span><span class="p" data-group-id="0545318488-3">(</span><span class="s">&quot;D&quot;</span><span class="p" data-group-id="0545318488-3">)</span><span class="w">
+</span><span class="p" data-group-id="0545318488-4">%</span><span class="nc" data-group-id="0545318488-4">Note</span><span class="p" data-group-id="0545318488-4">{</span><span class="ss">alteration</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="ss">base_pitch_class</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="0545318488-4">}</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Note</span><span class="o">.</span><span class="n">from_notation</span><span class="p" data-group-id="0545318488-5">(</span><span class="s">&quot;Ebb&quot;</span><span class="p" data-group-id="0545318488-5">)</span><span class="w">
+</span><span class="p" data-group-id="0545318488-6">%</span><span class="nc" data-group-id="0545318488-6">Note</span><span class="p" data-group-id="0545318488-6">{</span><span class="ss">alteration</span><span class="p">:</span><span class="w"> </span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="ss">base_pitch_class</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="0545318488-6">}</span></code></pre>
+  </section>
+</div>
+<div class="detail" id="letter/1">
+    <div class="detail-header">
+    <a href="#letter/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">letter(note)</span>
+          </div>
+  <section class="docstring">
+  </section>
+</div>
+<div class="detail" id="letters/0">
+    <div class="detail-header">
+    <a href="#letters/0" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">letters()</span>
+          </div>
+  <section class="docstring">
+<p>Returns all the letters used to describe music in western music</p>
+<p>Examples</p>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Note</span><span class="o">.</span><span class="n">letters</span><span class="w">
+</span><span class="p" data-group-id="2607436284-1">[</span><span class="s">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;D&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;E&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;F&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;G&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p" data-group-id="2607436284-1">]</span></code></pre>
+  </section>
+</div>
+<div class="detail" id="name/1">
+    <div class="detail-header">
+    <a href="#name/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">name(note)</span>
+          </div>
+  <section class="docstring">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Note</span><span class="o">.</span><span class="n">name</span><span class="p" data-group-id="5735744764-1">(</span><span class="p" data-group-id="5735744764-2">%</span><span class="nc" data-group-id="5735744764-2">Note</span><span class="p" data-group-id="5735744764-2">{</span><span class="ss">alteration</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="ss">base_pitch_class</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="5735744764-2">}</span><span class="p" data-group-id="5735744764-1">)</span><span class="w">
+</span><span class="s">&quot;C##&quot;</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Note</span><span class="o">.</span><span class="n">name</span><span class="p" data-group-id="5735744764-3">(</span><span class="p" data-group-id="5735744764-4">%</span><span class="nc" data-group-id="5735744764-4">Note</span><span class="p" data-group-id="5735744764-4">{</span><span class="ss">alteration</span><span class="p">:</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">base_pitch_class</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="5735744764-4">}</span><span class="p" data-group-id="5735744764-3">)</span><span class="w">
+</span><span class="s">&quot;Db&quot;</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Note</span><span class="o">.</span><span class="n">name</span><span class="p" data-group-id="5735744764-5">(</span><span class="p" data-group-id="5735744764-6">%</span><span class="nc" data-group-id="5735744764-6">Note</span><span class="p" data-group-id="5735744764-6">{</span><span class="ss">alteration</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="ss">base_pitch_class</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p" data-group-id="5735744764-6">}</span><span class="p" data-group-id="5735744764-5">)</span><span class="w">
+</span><span class="s">&quot;E&quot;</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Note</span><span class="o">.</span><span class="n">name</span><span class="p" data-group-id="5735744764-7">(</span><span class="p" data-group-id="5735744764-8">%</span><span class="nc" data-group-id="5735744764-8">Note</span><span class="p" data-group-id="5735744764-8">{</span><span class="ss">alteration</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="ss">base_pitch_class</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="5735744764-8">}</span><span class="p" data-group-id="5735744764-7">)</span><span class="w">
+</span><span class="s">&quot;C#&quot;</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Note</span><span class="o">.</span><span class="n">name</span><span class="p" data-group-id="5735744764-9">(</span><span class="p" data-group-id="5735744764-10">%</span><span class="nc" data-group-id="5735744764-10">Note</span><span class="p" data-group-id="5735744764-10">{</span><span class="ss">alteration</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="ss">base_pitch_class</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p" data-group-id="5735744764-10">}</span><span class="p" data-group-id="5735744764-9">)</span><span class="w">
+</span><span class="s">&quot;F#&quot;</span></code></pre>
+  </section>
+</div>
+<div class="detail" id="transpose/2">
+    <div class="detail-header">
+    <a href="#transpose/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">transpose(note, interval)</span>
+          </div>
+  <section class="docstring">
+<p>Transposes a note by a certain interval</p>
+<h2 id="transpose/2-examples" class="section-heading">
+  <a href="#transpose/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples:
+</h2>
+
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Note</span><span class="o">.</span><span class="n">transpose</span><span class="p" data-group-id="2533819540-1">(</span><span class="s">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;2M&quot;</span><span class="p" data-group-id="2533819540-1">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Note</span><span class="o">.</span><span class="n">name</span><span class="w">
+</span><span class="s">&quot;D&quot;</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Note</span><span class="o">.</span><span class="n">transpose</span><span class="p" data-group-id="2533819540-2">(</span><span class="s">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;2m&quot;</span><span class="p" data-group-id="2533819540-2">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Note</span><span class="o">.</span><span class="n">name</span><span class="w">
+</span><span class="s">&quot;Db&quot;</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Note</span><span class="o">.</span><span class="n">transpose</span><span class="p" data-group-id="2533819540-3">(</span><span class="s">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;1A&quot;</span><span class="p" data-group-id="2533819540-3">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Note</span><span class="o">.</span><span class="n">name</span><span class="w">
+</span><span class="s">&quot;C#&quot;</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Note</span><span class="o">.</span><span class="n">transpose</span><span class="p" data-group-id="2533819540-4">(</span><span class="s">&quot;C#&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;3M&quot;</span><span class="p" data-group-id="2533819540-4">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Note</span><span class="o">.</span><span class="n">name</span><span class="w">
+</span><span class="s">&quot;E#&quot;</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Note</span><span class="o">.</span><span class="n">transpose</span><span class="p" data-group-id="2533819540-5">(</span><span class="s">&quot;C#&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;1A&quot;</span><span class="p" data-group-id="2533819540-5">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Note</span><span class="o">.</span><span class="n">name</span><span class="w">
+</span><span class="s">&quot;C##&quot;</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Note</span><span class="o">.</span><span class="n">transpose</span><span class="p" data-group-id="2533819540-6">(</span><span class="s">&quot;C##&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;1A&quot;</span><span class="p" data-group-id="2533819540-6">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Note</span><span class="o">.</span><span class="n">name</span><span class="w">
+</span><span class="s">&quot;C###&quot;</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Note</span><span class="o">.</span><span class="n">transpose</span><span class="p" data-group-id="2533819540-7">(</span><span class="s">&quot;C#&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;5P&quot;</span><span class="p" data-group-id="2533819540-7">)</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Note</span><span class="o">.</span><span class="n">name</span><span class="w">
+</span><span class="s">&quot;G#&quot;</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Note</span><span class="o">.</span><span class="n">transpose</span><span class="p" data-group-id="2533819540-8">(</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">  </span><span class="p" data-group-id="2533819540-9">%</span><span class="nc" data-group-id="2533819540-9">Note</span><span class="p" data-group-id="2533819540-9">{</span><span class="ss">base_pitch_class</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">alteration</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="2533819540-9">}</span><span class="p">,</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">  </span><span class="p" data-group-id="2533819540-10">%</span><span class="nc" data-group-id="2533819540-10">Interval</span><span class="p" data-group-id="2533819540-10">{</span><span class="ss">letter_distance</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="ss">alteration</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="2533819540-10">}</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="p" data-group-id="2533819540-8">)</span><span class="w">
+</span><span class="p" data-group-id="2533819540-11">%</span><span class="nc" data-group-id="2533819540-11">Note</span><span class="p" data-group-id="2533819540-11">{</span><span class="ss">base_pitch_class</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="ss">alteration</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="2533819540-11">}</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Note</span><span class="o">.</span><span class="n">transpose</span><span class="p" data-group-id="2533819540-12">(</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">  </span><span class="p" data-group-id="2533819540-13">%</span><span class="nc" data-group-id="2533819540-13">Note</span><span class="p" data-group-id="2533819540-13">{</span><span class="ss">base_pitch_class</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="ss">alteration</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="2533819540-13">}</span><span class="p">,</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="w">  </span><span class="p" data-group-id="2533819540-14">%</span><span class="nc" data-group-id="2533819540-14">Interval</span><span class="p" data-group-id="2533819540-14">{</span><span class="ss">letter_distance</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="ss">alteration</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p" data-group-id="2533819540-14">}</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="p" data-group-id="2533819540-12">)</span><span class="w">
+</span><span class="p" data-group-id="2533819540-15">%</span><span class="nc" data-group-id="2533819540-15">Note</span><span class="p" data-group-id="2533819540-15">{</span><span class="ss">base_pitch_class</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="ss">alteration</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="2533819540-15">}</span></code></pre>
+  </section>
+</div>
+        </section>
+
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.19.1),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" rel="noopener" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="dist/app-a0c90688fa.js"></script>
+  
+  </body>
+</html>
+

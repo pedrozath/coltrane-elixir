@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.19.1">
+    <title>Coltrane.Theory.Interval – coltrane v0.0.1</title>
+    <link rel="stylesheet" href="dist/app-240d7fc7e5.css" />
+    <script src="dist/sidebar_items-0e3a5bf75f.js"></script>
+    
+  </head>
+  <body data-type="modules">
+    <script>try { if(localStorage.getItem('night-mode')) document.body.className += ' night-mode'; } catch (e) { }</script>
+    <div class="main">
+<button class="sidebar-button sidebar-toggle">
+  <span class="icon-menu" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Sidebar</span>
+</button>
+<button class="sidebar-button night-mode-toggle">
+  <span class="icon-theme" aria-hidden="true"></span>
+  <span class="sr-only">Toggle Theme</span>
+</button>
+<section class="sidebar">
+
+  <a href="api-reference.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+coltrane      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.0.1
+      </h2>
+    </div>
+  </a>
+
+  <form class="sidebar-search" action="search.html">
+    <button type="submit" class="search-button">
+      <span class="icon-search" aria-hidden="true"></span>
+    </button>
+    <input name="q" type="text" id="search-list" class="search-input" placeholder="Search" aria-label="Search" autocomplete="off" />
+  </form>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+
+
+  </ul>
+  <div class="gradient"></div>
+  <ul id="full-list" class="sidebar-fullList"></ul>
+</section>
+
+<section class="content">
+  <div class="content-outer">
+    <div id="content" class="content-inner">
+
+
+      <h1>
+        <small class="visible-xs">coltrane v0.0.1</small>
+Coltrane.Theory.Interval              </h1>
+
+
+        <section id="moduledoc">
+<p>Intervals describe the relationship between 2 different notes</p>
+        </section>
+
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Summary
+          </h1>
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#alter_quality/2">alter_quality(quality, alteration)</a>
+  </div>
+    <div class="summary-synopsis"><p>iex&gt; Interval.alter_quality(“M”, 0)
+  “M”</p>
+</div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#between/2">between(first_note, second_note)</a>
+  </div>
+    <div class="summary-synopsis"><p>This function gets the interval between 2 notes</p>
+</div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#circle/1">circle(interval)</a>
+  </div>
+    <div class="summary-synopsis"><p>iex&gt; Interval.from_notation(“5P”)</p>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">...&gt; </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Interval</span><span class="o">.</span><span class="n">circle</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">map</span><span class="p" data-group-id="3253295272-1">(</span><span class="o">&amp;</span><span class="nc">Interval</span><span class="o">.</span><span class="n">name</span><span class="o">/</span><span class="mi">1</span><span class="p" data-group-id="3253295272-1">)</span><span class="w">
+</span><span class="p" data-group-id="3253295272-2">[</span><span class="s">&quot;1P&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;2M&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;3M&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;4P&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;5P&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;6M&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;7M&quot;</span><span class="p" data-group-id="3253295272-2">]</span></code></pre>
+</div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#circle/2">circle(interval, intervals)</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#expand_distance_name/1">expand_distance_name(letter_distance)</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#expand_name/1">expand_name(name)</a>
+  </div>
+    <div class="summary-synopsis"><p>iex&gt; Interval.expand_name(“1P”)
+  “Perfect Unison”</p>
+</div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#expand_quality_name/1">expand_quality_name(quality)</a>
+  </div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#from_notation/1">from_notation(notation)</a>
+  </div>
+    <div class="summary-synopsis"><p>iex&gt; Interval.from_notation(“1P”)</p>
+<pre><code class="nohighlight makeup elixir"><span class="p" data-group-id="0467211552-1">%</span><span class="nc" data-group-id="0467211552-1">Interval</span><span class="p" data-group-id="0467211552-1">{</span><span class="ss">letter_distance</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="ss">alteration</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="0467211552-1">}</span></code></pre>
+</div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#full_name/1">full_name(interval)</a>
+  </div>
+    <div class="summary-synopsis"><p>iex&gt; Interval.full_name(%Interval{letter_distance: 3, alteration: -1})
+  “Diminished Fourth”</p>
+</div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#letter_distance/2">letter_distance(first_letter, second_letter)</a>
+  </div>
+    <div class="summary-synopsis"><h2>Examples:</h2>
+<p>  iex&gt; Interval.letter_distance(“C”, “D”)
+  1</p>
+</div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#name/1">name(interval)</a>
+  </div>
+    <div class="summary-synopsis"><p>iex&gt; Interval.name(%Interval{letter_distance: 0, alteration: 0})
+  “1P”</p>
+</div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#semitones/1">semitones(interval)</a>
+  </div>
+    <div class="summary-synopsis"><p>iex&gt; “2M” |&gt; Interval.from_notation |&gt; Interval.semitones</p>
+<pre><code class="nohighlight makeup elixir"><span class="mi">2</span></code></pre>
+</div>
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#sum/2">sum(interval1, interval2)</a>
+  </div>
+    <div class="summary-synopsis"><p>iex&gt; [“3M”, “3M”]</p>
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">...&gt; </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">map</span><span class="p" data-group-id="2301788941-1">(</span><span class="o">&amp;</span><span class="nc">Interval</span><span class="o">.</span><span class="n">from_notation</span><span class="o">/</span><span class="mi">1</span><span class="p" data-group-id="2301788941-1">)</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">reduce</span><span class="p" data-group-id="2301788941-2">(</span><span class="o">&amp;</span><span class="nc">Interval</span><span class="o">.</span><span class="n">sum</span><span class="o">/</span><span class="mi">2</span><span class="p" data-group-id="2301788941-2">)</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Interval</span><span class="o">.</span><span class="n">name</span><span class="w">
+</span><span class="s">&quot;5P&quot;</span></code></pre>
+</div>
+</div>
+  </div>
+          
+        </section>
+
+
+
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <span class="icon-link" aria-hidden="true"></span>
+              <span class="sr-only">Link to this section</span>
+            </a>
+            Functions
+          </h1>
+<div class="detail" id="alter_quality/2">
+    <div class="detail-header">
+    <a href="#alter_quality/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">alter_quality(quality, alteration)</span>
+          </div>
+  <section class="docstring">
+<p>  iex&gt; Interval.alter_quality(“M”, 0)
+  “M”</p>
+<p>  iex&gt; Interval.alter_quality(“M”, 1)
+  “A”</p>
+<p>  iex&gt; Interval.alter_quality(“M”, -1)
+  “m”</p>
+<p>  iex&gt; Interval.alter_quality(“M”, -2)
+  “D”</p>
+<p>  iex&gt; Interval.alter_quality(“M”, -3)
+  “DD”</p>
+<p>  iex&gt; Interval.alter_quality(“P”, 0)
+  “P”</p>
+<p>  iex&gt; Interval.alter_quality(“P”, 1)
+  “A”</p>
+<p>  iex&gt; Interval.alter_quality(“P”, -1)
+  “D”</p>
+<p>  iex&gt; Interval.alter_quality(“P”, -2)
+  “DD”</p>
+<p>  iex&gt; Interval.alter_quality(“P”, 2)
+  “AA”</p>
+  </section>
+</div>
+<div class="detail" id="between/2">
+    <div class="detail-header">
+    <a href="#between/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">between(first_note, second_note)</span>
+          </div>
+  <section class="docstring">
+<p>This function gets the interval between 2 notes</p>
+<h2 id="between/2-examples" class="section-heading">
+  <a href="#between/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples
+</h2>
+
+<p>  iex&gt; Interval.between(“C”, “C#”)
+  %Interval{alteration: 1, letter_distance: 0}</p>
+<p>  iex&gt; Interval.between(“C”, “D”)
+  %Interval{alteration: 0, letter_distance: 1}</p>
+<p>  iex&gt; Interval.between(“C”, “D”)
+  %Interval{letter_distance: 1, alteration: 0}</p>
+  </section>
+</div>
+<div class="detail" id="circle/1">
+    <div class="detail-header">
+    <a href="#circle/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">circle(interval)</span>
+          </div>
+  <section class="docstring">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Interval</span><span class="o">.</span><span class="n">from_notation</span><span class="p" data-group-id="2817523479-1">(</span><span class="s">&quot;5P&quot;</span><span class="p" data-group-id="2817523479-1">)</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Interval</span><span class="o">.</span><span class="n">circle</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">map</span><span class="p" data-group-id="2817523479-2">(</span><span class="o">&amp;</span><span class="nc">Interval</span><span class="o">.</span><span class="n">name</span><span class="o">/</span><span class="mi">1</span><span class="p" data-group-id="2817523479-2">)</span><span class="w">
+</span><span class="p" data-group-id="2817523479-3">[</span><span class="s">&quot;1P&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;2M&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;3M&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;4P&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;5P&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;6M&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;7M&quot;</span><span class="p" data-group-id="2817523479-3">]</span></code></pre>
+  </section>
+</div>
+<div class="detail" id="circle/2">
+    <div class="detail-header">
+    <a href="#circle/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">circle(interval, intervals)</span>
+          </div>
+  <section class="docstring">
+  </section>
+</div>
+<div class="detail" id="expand_distance_name/1">
+    <div class="detail-header">
+    <a href="#expand_distance_name/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">expand_distance_name(letter_distance)</span>
+          </div>
+  <section class="docstring">
+  </section>
+</div>
+<div class="detail" id="expand_name/1">
+    <div class="detail-header">
+    <a href="#expand_name/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">expand_name(name)</span>
+          </div>
+  <section class="docstring">
+<p>  iex&gt; Interval.expand_name(“1P”)
+  “Perfect Unison”</p>
+<p>  iex&gt; Interval.expand_name(“3m”)
+  “Minor Third”</p>
+<p>  iex&gt; Interval.expand_name(“5A”)
+  “Augmented Fifth”</p>
+<p>  iex&gt; Interval.expand_name(“5AAA”)
+  “Triple Augmented Fifth”</p>
+<p>  iex&gt; Interval.expand_name(“1DD”)
+  “Double Diminished Unison”</p>
+  </section>
+</div>
+<div class="detail" id="expand_quality_name/1">
+    <div class="detail-header">
+    <a href="#expand_quality_name/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">expand_quality_name(quality)</span>
+          </div>
+  <section class="docstring">
+  </section>
+</div>
+<div class="detail" id="from_notation/1">
+    <div class="detail-header">
+    <a href="#from_notation/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">from_notation(notation)</span>
+          </div>
+  <section class="docstring">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="nc">Interval</span><span class="o">.</span><span class="n">from_notation</span><span class="p" data-group-id="3588521268-1">(</span><span class="s">&quot;1P&quot;</span><span class="p" data-group-id="3588521268-1">)</span><span class="w">
+</span><span class="p" data-group-id="3588521268-2">%</span><span class="nc" data-group-id="3588521268-2">Interval</span><span class="p" data-group-id="3588521268-2">{</span><span class="ss">letter_distance</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="ss">alteration</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="3588521268-2">}</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Interval</span><span class="o">.</span><span class="n">from_notation</span><span class="p" data-group-id="3588521268-3">(</span><span class="s">&quot;2M&quot;</span><span class="p" data-group-id="3588521268-3">)</span><span class="w">
+</span><span class="p" data-group-id="3588521268-4">%</span><span class="nc" data-group-id="3588521268-4">Interval</span><span class="p" data-group-id="3588521268-4">{</span><span class="ss">letter_distance</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">alteration</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p" data-group-id="3588521268-4">}</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Interval</span><span class="o">.</span><span class="n">from_notation</span><span class="p" data-group-id="3588521268-5">(</span><span class="s">&quot;3m&quot;</span><span class="p" data-group-id="3588521268-5">)</span><span class="w">
+</span><span class="p" data-group-id="3588521268-6">%</span><span class="nc" data-group-id="3588521268-6">Interval</span><span class="p" data-group-id="3588521268-6">{</span><span class="ss">letter_distance</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="ss">alteration</span><span class="p">:</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p" data-group-id="3588521268-6">}</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Interval</span><span class="o">.</span><span class="n">from_notation</span><span class="p" data-group-id="3588521268-7">(</span><span class="s">&quot;4m&quot;</span><span class="p" data-group-id="3588521268-7">)</span><span class="w">
+</span><span class="p" data-group-id="3588521268-8">%</span><span class="nc" data-group-id="3588521268-8">Coltrane.Theory.Interval</span><span class="p" data-group-id="3588521268-8">{</span><span class="ss">alteration</span><span class="p">:</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="ss">letter_distance</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p" data-group-id="3588521268-8">}</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="nc">Interval</span><span class="o">.</span><span class="n">from_notation</span><span class="p" data-group-id="3588521268-9">(</span><span class="s">&quot;5AA&quot;</span><span class="p" data-group-id="3588521268-9">)</span><span class="w">
+</span><span class="p" data-group-id="3588521268-10">%</span><span class="nc" data-group-id="3588521268-10">Interval</span><span class="p" data-group-id="3588521268-10">{</span><span class="ss">letter_distance</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="ss">alteration</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p" data-group-id="3588521268-10">}</span></code></pre>
+  </section>
+</div>
+<div class="detail" id="full_name/1">
+    <div class="detail-header">
+    <a href="#full_name/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">full_name(interval)</span>
+          </div>
+  <section class="docstring">
+<p>  iex&gt; Interval.full_name(%Interval{letter_distance: 3, alteration: -1})
+  “Diminished Fourth”</p>
+<p>  iex&gt; Interval.full_name(%Interval{letter_distance: 2, alteration: 0})
+  “Major Third”</p>
+  </section>
+</div>
+<div class="detail" id="letter_distance/2">
+    <div class="detail-header">
+    <a href="#letter_distance/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">letter_distance(first_letter, second_letter)</span>
+          </div>
+  <section class="docstring">
+<h2 id="letter_distance/2-examples" class="section-heading">
+  <a href="#letter_distance/2-examples" class="hover-link"><span class="icon-link" aria-hidden="true"></span></a>
+  Examples:
+</h2>
+
+<p>  iex&gt; Interval.letter_distance(“C”, “D”)
+  1</p>
+<p>  iex&gt; Interval.letter_distance(“D”, “C”)
+  -1</p>
+<p>  iex&gt; Interval.letter_distance(“C”, “B”)
+  6</p>
+<p>  iex&gt; Interval.letter_distance(“B”, “C”)
+  -6</p>
+  </section>
+</div>
+<div class="detail" id="name/1">
+    <div class="detail-header">
+    <a href="#name/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">name(interval)</span>
+          </div>
+  <section class="docstring">
+<p>  iex&gt; Interval.name(%Interval{letter_distance: 0, alteration: 0})
+  “1P”</p>
+<p>  iex&gt; Interval.name(%Interval{letter_distance: 2, alteration: 0})
+  “3M”</p>
+<p>  iex&gt; Interval.name(%Interval{letter_distance: 1, alteration: -1})
+  “2m”</p>
+<p>  iex&gt; Interval.name(%Interval{letter_distance: 2, alteration: -1})
+  “3m”</p>
+<p>  iex&gt; Interval.name(%Interval{letter_distance: 3, alteration: 1})
+  “4A”</p>
+<p>  iex&gt; Interval.name(%Interval{letter_distance: 3, alteration: 2})
+  “4AA”</p>
+  </section>
+</div>
+<div class="detail" id="semitones/1">
+    <div class="detail-header">
+    <a href="#semitones/1" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">semitones(interval)</span>
+          </div>
+  <section class="docstring">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="s">&quot;2M&quot;</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Interval</span><span class="o">.</span><span class="n">from_notation</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Interval</span><span class="o">.</span><span class="n">semitones</span><span class="w">
+</span><span class="mi">2</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="s">&quot;1A&quot;</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Interval</span><span class="o">.</span><span class="n">from_notation</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Interval</span><span class="o">.</span><span class="n">semitones</span><span class="w">
+</span><span class="mi">1</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="s">&quot;3D&quot;</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Interval</span><span class="o">.</span><span class="n">from_notation</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Interval</span><span class="o">.</span><span class="n">semitones</span><span class="w">
+</span><span class="mi">3</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="s">&quot;3M&quot;</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Interval</span><span class="o">.</span><span class="n">from_notation</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Interval</span><span class="o">.</span><span class="n">semitones</span><span class="w">
+</span><span class="mi">4</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="s">&quot;4A&quot;</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Interval</span><span class="o">.</span><span class="n">from_notation</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Interval</span><span class="o">.</span><span class="n">semitones</span><span class="w">
+</span><span class="mi">6</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="p" data-group-id="3984043797-1">%</span><span class="nc" data-group-id="3984043797-1">Interval</span><span class="p" data-group-id="3984043797-1">{</span><span class="ss">letter_distance</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p" data-group-id="3984043797-1">}</span><span class="w"> </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Interval</span><span class="o">.</span><span class="n">semitones</span><span class="w">
+</span><span class="mi">1</span></code></pre>
+  </section>
+</div>
+<div class="detail" id="sum/2">
+    <div class="detail-header">
+    <a href="#sum/2" class="detail-link" title="Link to this function">
+      <span class="icon-link" aria-hidden="true"></span>
+      <span class="sr-only">Link to this function</span>
+    </a>
+    <span class="signature">sum(interval1, interval2)</span>
+          </div>
+  <section class="docstring">
+<pre><code class="nohighlight makeup elixir"><span class="gp unselectable">iex&gt; </span><span class="p" data-group-id="0889602860-1">[</span><span class="s">&quot;3M&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;3M&quot;</span><span class="p" data-group-id="0889602860-1">]</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">map</span><span class="p" data-group-id="0889602860-2">(</span><span class="o">&amp;</span><span class="nc">Interval</span><span class="o">.</span><span class="n">from_notation</span><span class="o">/</span><span class="mi">1</span><span class="p" data-group-id="0889602860-2">)</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">reduce</span><span class="p" data-group-id="0889602860-3">(</span><span class="o">&amp;</span><span class="nc">Interval</span><span class="o">.</span><span class="n">sum</span><span class="o">/</span><span class="mi">2</span><span class="p" data-group-id="0889602860-3">)</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Interval</span><span class="o">.</span><span class="n">name</span><span class="w">
+</span><span class="s">&quot;5P&quot;</span><span class="w">
+
+</span><span class="gp unselectable">iex&gt; </span><span class="p" data-group-id="0889602860-4">[</span><span class="s">&quot;3M&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;3m&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;3M&quot;</span><span class="p" data-group-id="0889602860-4">]</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">map</span><span class="p" data-group-id="0889602860-5">(</span><span class="o">&amp;</span><span class="nc">Interval</span><span class="o">.</span><span class="n">from_notation</span><span class="o">/</span><span class="mi">1</span><span class="p" data-group-id="0889602860-5">)</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Enum</span><span class="o">.</span><span class="n">reduce</span><span class="p" data-group-id="0889602860-6">(</span><span class="o">&amp;</span><span class="nc">Interval</span><span class="o">.</span><span class="n">sum</span><span class="o">/</span><span class="mi">2</span><span class="p" data-group-id="0889602860-6">)</span><span class="w">
+</span><span class="gp unselectable">...&gt; </span><span class="o">|&gt;</span><span class="w"> </span><span class="nc">Interval</span><span class="o">.</span><span class="n">name</span><span class="w">
+</span><span class="s">&quot;7m&quot;</span></code></pre>
+  </section>
+</div>
+        </section>
+
+          <footer class="footer">
+        <p>
+          <span class="line">
+            Built using
+            <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" target="_blank" rel="help noopener">ExDoc</a> (v0.19.1),
+          </span>
+          <span class="line">
+            designed by
+            <a href="https://twitter.com/dignifiedquire" target="_blank" rel="noopener" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+            </span>
+        </p>
+      </footer>
+    </div>
+  </div>
+</section>
+</div>
+  <script src="dist/app-a0c90688fa.js"></script>
+  
+  </body>
+</html>
+
