@@ -251,7 +251,7 @@ defmodule Coltrane.Theory.Interval do
     should_continue =
       [first, new_interval]
       |> Enum.map(&Interval.semitones/1)
-      |> Enum.reduce(&Kernel.!==/2)
+      |> Enum.reduce(& &1 !== &2)
 
     if should_continue do
       circle(interval, intervals ++ [new_interval])
